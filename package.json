@@ -1,6 +1,6 @@
 {
   "name": "noise-gate",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "To filter out the noise from the audio source",
   "main": "index.js",
   "scripts": {
