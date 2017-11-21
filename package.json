@@ -1,0 +1,33 @@
+{
+  "name": "noise-gate",
+  "version": "0.0.1",
+  "description": "To filter out the noise from the audio source",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-browser && npm run build-minify",
+    "build-browser": "browserify index.js --standalone NoiseGateNode -o build/noise-gate-node.js -t babelify --presets env",
+    "build-minify": "uglifyjs build/noise-gate-node.js -o build/noise-gate-node.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "audio",
+    "filter",
+    "noise",
+    "noise-gate",
+    "reduction",
+    "web-audio-api"
+  ],
+  "author": "Tennison Chan<tennison.chan+gh@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "uglify-js": "^3.1.10",
+    "web-audio-test-api": "^0.5.2"
+  },
+  "browserify": {
+    "transform": [["babelify", { "presets": ["env"] }]]
+  }
+}
