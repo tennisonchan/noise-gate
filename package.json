@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build-browser && npm run build-minify",
-    "build-browser": "browserify index.js --standalone NoiseGateNode -o build/noise-gate-node.js -t babelify --presets env",
-    "build-minify": "uglifyjs build/noise-gate-node.js -o build/noise-gate-node.min.js",
+    "build-browser": "browserify index.js --standalone NoiseGateNode -o build/noise-gate.js -t babelify --presets env",
+    "build-minify": "uglifyjs build/noise-gate.js -o build/noise-gate.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
